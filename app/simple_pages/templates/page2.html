@@ -19,8 +19,8 @@
 <div>
     <nav class="nav nav-pills nav-fill">
         <a class="nav-link" href="/">Homepage</a>
-        <a class="nav-link active" aria-current="page" href="/page1">GitHub</a>
-        <a class="nav-link" href="/page2">Docker</a>
+        <a class="nav-link"  href="/page1">GitHub</a>
+        <a class="nav-link active" aria-current="page" href="/page2">Docker</a>
         <a class="nav-link" href="/page3">Python/Flask</a>
         <a class="nav-link" href="/page4">CI/CD</a>
 
@@ -28,35 +28,111 @@
 
     <div class="row">
         <!-- col 1 -->
-        <h4>Lets read about docker</h4>
+        <h1>Docker</h1>
+
         <div class="col-8">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Nibh praesent tristique magna sit amet purus. At tempor commodo ullamcorper a
-                lacus. Arcu odio ut sem nulla pharetra diam sit. Imperdiet sed euismod nisi porta lorem. Mi bibendum
-                neque egestas congue quisque egestas diam in arcu. Faucibus et molestie ac feugiat. Sed blandit libero
-                volutpat sed. Malesuada fames ac turpis egestas maecenas. Quis viverra nibh cras pulvinar mattis nunc.
-                Neque convallis a cras semper. Egestas pretium aenean pharetra magna ac placerat vestibulum. Mattis
-                vulputate enim nulla aliquet. Non odio euismod lacinia at quis risus sed vulputate odio. Sit amet est
-                placerat in egestas. Nulla facilisi nullam vehicula ipsum a arcu cursus. Non nisi est sit amet.
-                Fermentum et sollicitudin ac orci phasellus egestas tellus. Quis auctor elit sed vulputate mi sit.
+            <h3>What is Docker?</h3>
+            <p>Docker is an open platform for developing, shipping, and running applications. Docker enables you to
+                separate your applications from your infrastructure so you can deliver software quickly. With Docker,
+                you can manage your infrastructure in the same ways you manage your applications. By taking advantage
+                of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly
+                reduce the delay between writing code and running it in production.
             </p>
+            <h5>Container</h5>
             <p>
-                Augue neque gravida in fermentum et sollicitudin. Id faucibus nisl tincidunt eget nullam non nisi est
-                sit. Eget mauris pharetra et ultrices neque ornare aenean euismod. Diam maecenas ultricies mi eget. At
-                volutpat diam ut venenatis. Viverra justo nec ultrices dui sapien eget mi proin sed. Mi in nulla posuere
-                sollicitudin aliquam ultrices sagittis orci a. Id faucibus nisl tincidunt eget nullam non nisi est. Sed
-                pulvinar proin gravida hendrerit lectus a. Suscipit adipiscing bibendum est ultricies integer quis
-                auctor elit. Curabitur vitae nunc sed velit. Mattis aliquam faucibus purus in massa.
+                A container is a standard unit of software that packages up code and all its dependencies so the
+                application runs quickly and reliably from one computing environment to another. A Docker container
+                image is a lightweight, standalone, executable package of software that includes everything needed to
+                run an application: code, runtime, system tools, system libraries and settings.
+            <p>
+                Container images become containers at runtime and in the case of Docker containers - images become
+                containers when they run on Docker Engine. Available for both Linux and Windows-based applications,
+                containerized software will always run the same, regardless of the infrastructure. Containers isolate
+                software from its environment and ensure that it works uniformly despite differences for instance
+                between development and staging.
             </p>
-            </p> Pretium fusce id velit ut tortor. Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque.
-            Venenatis
-            cras sed felis eget. Purus in mollis nunc sed. Elit ut aliquam purus sit amet luctus venenatis.
-            Facilisis volutpat est velit egestas. Amet risus nullam eget felis eget. Quis risus sed vulputate odio
-            ut enim blandit volutpat maecenas. Egestas dui id ornare arcu. Sociis natoque penatibus et magnis dis
-            parturient montes nascetur. Sit amet commodo nulla facilisi nullam vehicula ipsum a arcu. Facilisis
-            gravida neque convallis a cras semper. Nunc id cursus metus aliquam eleifend mi in. In dictum non
-            consectetur a. Senectus et netus et malesuada fames ac. Lacinia at quis risus sed vulputate odio. Congue
-            eu consequat ac felis. Enim sit amet venenatis urna cursus. Nulla aliquet porttitor lacus luctus.</p>
+
+            </p>
+            <h5>Docker Images</h5>
+            </p> A Docker image is a read-only template that contains a set of instructions for creating a container
+            that can run on the Docker platform. It provides a convenient way to ackage up applications and
+            preconfigured server environments, which you can use for your own private use or share publicly with other
+            Docker users. Docker images are also the starting point for anyone using Docker for the first time.
+            </p>
+
+            <h4>Docker Compose</h4>
+            <p>
+                Docker containers are used for running applications in an isolated environment. It’s quite common
+                nowadays to see application deployments done in Docker for the numerous benefits it brings. However,
+                it’s often not as simple as just running a single container. Usually you may have many containers coming
+                together to act as one cohesive service made up of many moving parts.</p>
+
+
+            <p> Managing all of these at deployment time is messy, so to clean it up, Docker provides Docker Compose, a
+                configuration tool used for running multiple containers at once. You can define all of the configuration
+                in one YAML file, and then start all the containers with one command.</p>
+
+            <p> Rather than having all your services in one big container, Docker Compose allows you to split them up
+                into individually manageable containers. This is both better for building and deployment, as you can
+                manage all of them in separate codebases, and don’t need to manually start each individual container.
+            </p>
+
+            <ul><h5>Using Docker Compose is a three step process:</h5>
+                <li>Build the component images using their Dockerfiles, or pull them from a registry.</li>
+                <li>Define all of the component services in a docker-compose.yml file.</li>
+                <li>Run all of them together using the docker-compose CLI.</li>
+            </ul>
+            <h4>Docker Commands</h4>
+            <dl>
+                <dt>
+                    <h7>How to start Docker project</h7>
+                    <p><code>$ docker compose up --build </code></p>
+                </dt>
+                <dd>- This builds your entire container based on your YAML file, and the things you have specified.
+                </dd>
+                <dt>
+                    <h7>How to check logs</h7>
+                    <p><code>$ docker-compose logs -f </code></p>
+                </dt>
+                <dd>- You’ll see the logs from each of the services interleaved into a single stream. This is incredibly
+                    useful when you want to watch for timing-related issues.
+                </dd>
+                <dt>
+                    <h7>Basic Commands</h7>
+                    <p><code>$ docker ps </code></p>
+                </dt>
+                <dd>- This command is used to list the running containers
+                </dd>
+                <dt>
+
+                    <p><code>$ docker stop </code></p>
+                </dt>
+                <dd>- This command stops a running container
+                </dd>
+                <dt>
+                    <p><code>$ docker run </code></p>
+                </dt>
+                <dd>- This command is used to create a container from an image
+                </dd>
+                <dt>
+                    <p><code>$ docker push < username/image name > </code></p>
+                </dt>
+                <dd>- This command is used to push an image to the docker hub repository
+                </dd>
+                <dt>
+                    <p><code>$ docker images </code></p>
+                </dt>
+                <dd>- This command lists all the locally stored docker images
+                </dd>
+                <dt>
+                    <p><code>$ docker rm < container id ></code></p>
+                </dt>
+                <dd>- This command is used to delete an image from local storage
+                </dd>
+                <dt>
+            </dl>
+
+
         </div>
         <!-- col 1 end -->
         <!-- col 2 for images -->
