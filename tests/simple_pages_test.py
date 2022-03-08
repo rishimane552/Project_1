@@ -22,7 +22,7 @@ def test_request_page1(client):
     """This makes the index page"""
     response = client.get("/page1")
     assert response.status_code == 200
-    assert b"Lets read about Git" in response.data
+    assert b"Git" in response.data
 
 
 def test_request_page2(client):
