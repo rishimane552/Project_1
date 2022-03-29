@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+<body>
+<div>
+    <nav class="nav nav-pills nav-fill">
+        <a class="nav-link" href="/">Homepage</a>
+        <a class="nav-link" href="/page1">Git</a>
+        <a class="nav-link" href="/page2">Docker</a>
+        <a class="nav-link active" aria-current="page" href="/page3">Python/Flask</a>
+        <a class="nav-link" href="/page4">CI/CD</a>
+        <a class="nav-link" href="/page5">Glossary</a>
+        <a class="nav-link active" aria-current="page" href="/page6">AAA Testing</a>
+        <a class="nav-link" href="/page7">OOPs</a>
+        <a class="nav-link" href="/page8">SOLID</a>
+
+    </nav>
+
+    <div class="row">
+        <!-- col 1 -->
+        <h1 class="font-monospace">AAA Testing</h1><br>
+        <div class="col-8">
+            <h4><b><i>What is Testing</i></b></h4><br>
+            <p>
+                A test is a procedure that exercises a behavior to determine if the behavior functions correctly.
+                There are several different kinds of tests, like unit tests, integration tests, or end-to-end tests,
+                but all functional tests do the same basic thing: they try something and report PASS or FAIL.
+                Testing provides an empirical feedback loop for development. That’s how testing keeps us safe. With tests,
+                we know when things break. Without tests, coding can be dangerous. We don’t want to deploy big ol’ bugs!
+                So, if we intend to spend time writing tests, how can we write good tests? There’s a simple but powerful
+                pattern I like to follow: <b><i> Arrange-Act-Assert </i></b>.
+
+            </p>
+            <h4><b> AAA Testing </b> </h4>
+            <ul>
+                <li><b><i> Arrange </i></b>
+                    <p>
+                        Arrange inputs and targets. Arrange steps should set up the test case. Does the test require any
+                        objects or special settings? Does it need to prep a database? Does it need to log into a web app?
+                        Handle all of these operations at the start of the test. You bring the system under test to a desired
+                        state and configure the dependencies: either instantiate them directly or prepare their test doubles.
+                    </p>
+                </li>
+                <li><b><i> Act </i></b>
+                    <p>
+                        Act on the target behavior. Act steps should cover the main thing to be tested. This could be
+                        calling a function or method, calling a REST API, or interacting with a web page. Keep actions
+                        focused on the target behavior.
+                    </p>
+
+                </li>
+                <li><b><i> Assert </i></b>
+                    <p>
+                        Assert expected outcomes. Act steps should elicit some sort of response. Assert steps verify the
+                        goodness or badness of that response. Sometimes, assertions are as simple as checking numeric or
+                        string values. Other times, they may require checking multiple facets of a system. Assertions
+                        will ultimately determine if the test passes or fails.
+                    </p>
+                </li>
+                <li>
+                 The code below is a snippet from our calculator project:
+                    <p><pre><code>def test_calculation_multiply_get_result_method():
+                                        """Testing the Calculator Multiply"""
+                                        tuple_list = (1, 2)
+                                        calculation = Multiplication.create(tuple_list)
+                                        assert calculation.get_result() == 2</code></pre></p>
+                    <ul>
+                        <li>
+                            The Arrange step creates a variable named “tuple_list” for testing.
+                        </li>
+                        <li>
+                            The Act step calls the “Multiplication.create” function using the “tuple_list” variable and stores the returned
+                            value in a variable named “calculation.”
+                        </li>
+                        <li>
+                            The Assert step verifies that “calculation.get_result()” is the value 2.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    The code below is from simple pages test:
+                    <p><pre><code>def test_request_page1(client):
+                    """This makes the page1 page"""
+                    response = client.get("/page1")
+                    assert response.status_code == 200
+                    assert b"Git" in response.data
+                        </code></pre></p>
+                    <ul>
+                        <li>
+                            The Arrange step creates a variable named “tuple_list” for testing.
+                        </li>
+                        <li>
+                            The Act step calls the “Multiplication.create” function using the “tuple_list” variable and stores the returned
+                            value in a variable named “calculation.”
+                        </li>
+                        <li>
+                            The Assert step verifies that “calculation.get_result()” is the value 2.
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+        <!-- col 1 end -->
+        <!-- col 2 for images -->
+
+        <div class="col">
+            <div class="row mb-3"><li><a href="https://github.com/rishimane552" >GitHub Repo: Rishikesh Mane</a></li>
+                </div>
+            <!-- row 1 image1 -->
+            <div class="row mb-3">
+                <img src="{{ url_for('static', filename='images/py2.png') }}" class="img-fluid" alt="Image 1">
+            </div>
+            <!-- row 1 image1 end -->
+            <!-- row 2 image2 -->
+
+            <div class="row mb-3">
+                <img src="{{ url_for('static', filename='images/py1.png') }}" class="img-fluid" alt="Image 2">
+            </div>
+            <!-- row 2 image2 end -->
+            <!-- row 3 image3 -->
+
+            <div class="row mb-3">
+                <img src="{{ url_for('static', filename='images/py3.png') }}" class="img-fluid" alt="Image 3">
+            </div>
+            <!-- row 3 image3 end -->
+
+        </div>
+        <!-- col 2 for images end-->
+
+    </div>
+</div>
