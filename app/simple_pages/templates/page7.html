@@ -30,34 +30,36 @@
         <div class="col-8">
             <h4><b><i>Encapsulation</i></b></h4><br>
             <p>
-                <b><i> Encapsulation </i></b> in Python describes the concept of bundling data and methods within a single unit. So,
+                <b><i> Encapsulation </i></b> in Python describes the concept of bundling data and methods within a
+                single unit. So,
                 for example, when you create a class, it means you are implementing encapsulation. A class is an example
                 of encapsulation as it binds all the data members (instance variables) and methods into a single unit.
             </p>
-            <pre><code>class Calculation:
-                """ calculation abstract base class"""
+            <pre class="border-top border-bottom" style="height: 300px"><code>from calculator.calculations import Addition, Subtraction, Multiplication, Division
 
-                # pylint: disable=too-few-public-methods
-                def __init__(self, tuple_list: tuple):
-                    """ constructor method"""
-                    self.values = Calculation.convert_args_to_tuple_of_float(tuple_list)
 
-                @classmethod
-                def create(cls, tuple_list: tuple):
-                    """ factory method"""
-                    return cls(tuple_list)
+class Calculator:
+    """ This is the default result property"""
+
+    @staticmethod
+    def multiply(tuple_list):
+        """ This is the multiply method"""
+        calculation = Multiplication.create(tuple_list)
+        return calculation.get_result()
             </code></pre>
             <p>
-                In this example, we create an Employee class by defining employee attributes such as name and salary as
-                an instance variable and implementing behavior using work() and show() instance methods.
+                In this example, we create an Calculator class by defining multiply attribute such as tuple list
+                an instance variable. it will bind and store all the data and functionally to the calculation variable
+                to perform get_result() method.
             </p>
             <h4><b><i>Inheritance</i></b></h4><br>
             <p>
-                <b><i> Inheritance </i></b> in Python describes the concept of bundling data and methods within a single unit. So,
+                <b><i> Inheritance </i></b> in Python describes the concept of bundling data and methods within a single
+                unit. So,
                 for example, when you create a class, it means you are implementing encapsulation. A class is an example
                 of encapsulation as it binds all the data members (instance variables) and methods into a single unit.
             </p>
-            <pre><code>class Calculation:
+            <pre class="border-top border-bottom" style="height: 300px"><code>class Calculation:
             """ calculation abstract base class"""
 
             # pylint: disable=too-few-public-methods
@@ -92,6 +94,11 @@ class Addition(Calculation):
             </code>
 
             </pre>
+            <p>
+                In this example, we have Addition class inherited from the calculation class. the child class which is
+                the addition class will have access to all the methods and variables from the parent class which is the
+                Calculation class. sum_of_values = Add.add(value, sum_of_values) in this code we are using add function from the parent class which was created in Calculation
+            </p>
             <h4><b><i>Polymorphism</i></b></h4><br>
             <p>
                 The word polymorphism means having many forms. In programming, polymorphism means the same function name
@@ -99,10 +106,12 @@ class Addition(Calculation):
             </p>
             <p>
                 In Python, Polymorphism lets us define methods in the child class that have the same name as the methods
-                in the parent class. In inheritance, the child class inherits the methods from the parent class. However,
+                in the parent class. In inheritance, the child class inherits the methods from the parent class.
+                However,
                 it is possible to modify a method in a child class that it has inherited from the parent class. This is
                 particularly useful in cases where the method inherited from the parent class doesn’t quite fit the
-                child class. In such cases, we re-implement the method in the child class. This process of re-implementing
+                child class. In such cases, we re-implement the method in the child class. This process of
+                re-implementing
                 a method in the child class is known as Method Overriding.
             </p>
 
@@ -112,8 +121,9 @@ class Addition(Calculation):
         <!-- col 2 for images -->
 
         <div class="col">
-            <div class="row mb-3"><li><a href="https://github.com/rishimane552" >GitHub Repo: Rishikesh Mane</a></li>
-                </div>
+            <div class="row mb-3">
+                <li><a href="https://github.com/rishimane552">GitHub Repo: Rishikesh Mane</a></li>
+            </div>
             <!-- row 1 image1 -->
             <div class="row mb-3">
                 <img src="{{ url_for('static', filename='images/py2.png') }}" class="img-fluid" alt="Image 1">
