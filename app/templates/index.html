@@ -19,10 +19,18 @@
 <div class="container">
     <nav class="nav nav-pills nav-fill">
         <a class="nav-link active" aria-current="page" href="/">Homepage</a>
+
+        <a class="nav-link" href="/page1">GitHub</a>
+
         <a class="nav-link" href="/page1">Git</a>
+
         <a class="nav-link" href="/page2">Docker</a>
         <a class="nav-link" href="/page3">Python/Flask</a>
         <a class="nav-link" href="/page4">CI/CD</a>
+        <a class="nav-link" href="/page5">Glossary</a>
+        <a class="nav-link" href="/page6">AAA Testing</a>
+        <a class="nav-link" href="/page7">OOPs</a>
+        <a class="nav-link" href="/page8">SOLID</a>
 
     </nav>
     <div class="row border border-primary span6 carouselsizeset">
@@ -30,6 +38,18 @@
         <div id="carouselExampleControls" class="carousel slide " data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
+
+                    <a href="/page1"><img src="{{ url_for('static', filename='images/git_index.png') }}"  class=" img-fluid d-block mx-auto" alt="git"></a>
+                </div>
+                <div class="carousel-item ">
+                    <a href="/page2"><img src="{{ url_for('static', filename='images/docker_index.png') }}" class="img-fluid d-block mx-auto" alt="docker"></a>
+                </div>
+                <div class="carousel-item">
+                    <a href="/page3"><img src="{{ url_for('static', filename='images/py_index.png') }}" class="img-fluid d-block mx-auto" alt="flask"></a>
+                </div>
+                <div class="carousel-item">
+                    <a href="/page4"><img src="{{ url_for('static', filename='images/cicd.png') }}" class="img-fluid d-block mx-auto" alt="cicd"></a>
+
                     <a href="/page1"><img src="{{ url_for('static', filename='images/git_index.png') }}"
                                           class="d-block w-100" alt="git"></a>
                 </div>
@@ -44,6 +64,7 @@
                 <div class="carousel-item">
                     <a href="/page4"><img src="{{ url_for('static', filename='images/cicd.png') }}"
                                           class="d-block w-100" alt="cicd"></a>
+
                 </div>
 
             </div>
@@ -80,6 +101,7 @@
                     <p class="card-text">Docker is an open platform for developing, shipping, and running applications.Click on the link below to read more.</p>
                     <a href="/page2" class="card-link">Docker</a>
 
+
                 </div>
             </div>
         </div>
@@ -91,20 +113,102 @@
                     <p class="card-text">This has details of Project Directory, and briefly talks about Pytest</p>
                     <a href="/page3" class="card-link">Python/Flask</a>
 
+
                 </div>
             </div>
         </div>
         <div class="col">
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
+
                     <h5 class="card-title">CI/CD</h5>
 
                     <p class="card-text">Continous Integration and Continous Delivery/Deployment</p>
                     <a href="/page4" class="card-link">CI/CD</a>
 
+                    <h5 class="card-title">Python/Flask</h5>
+
+                    <p class="card-text">This has details of Project Directory, and briefly talks about Pytest</p>
+                    <a href="/page3" class="card-link">Python/Flask</a>
+
+
                 </div>
             </div>
         </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+
+                    <h5 class="card-title">OOPs Glossary</h5>
+
+                    <p class="card-text">This Page tells you more about the basic OOPs terminology</p>
+                    <a href="/page5" class="card-link">OOPs Glossary</a>
+
+                    <h5 class="card-title">CI/CD</h5>
+
+                    <p class="card-text">Continous Integration and Continous Delivery/Deployment</p>
+                    <a href="/page4" class="card-link">CI/CD</a>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">AAA Testing</h5>
+
+                    <p class="card-text">This Page talks about testing and why testing is important, and gives a brief
+                                            idea on what AAA testing is.
+                    </p>
+                    <a href="/page6" class="card-link">AAA Testing</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">OOPs</h5>
+
+                    <p class="card-text">This Page talks more about the four principles of OOPs programming
+                    and to gives examples from the calculator program.
+                    </p>
+                    <a href="/page7" class="card-link">OOPs</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">SOLID</h5>
+
+                    <p class="card-text">This talks more about what SOLID is and how we implemented in the Calculator program</p>
+                    <a href="/page8" class="card-link">SOLID</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <h3><p>Bried Introduction about Myself</p></h3>
+
+        <p style="font-size: large">First of all, welcome to my website. My name is Rishikesh Mane. I am currently pursuing
+            my masters in Data Science at NJIT and have completed my bachelors in computer engineering at NJIT as well. I am currently
+            doing and internship at Algonox Technologies as Software Engineer. As an intern, i am working under a Senior Data Scientist.
+            and Solutions Architect, to develop an AI-Driven use case for the company
+            So far, I've created
+            projects using the Django Framework, but this time I got the opportunity to learn the Flask Framework for
+            this project and also got more ideas about Pylint, AAA Testing, OOPS Concepts, and SOLID principles.</p>
+        <p style="font-size: large">
+            This class gives a better understanding of Web Development,and also the basic sotware Development.
+            We got the develop a web application using the flask framework and also learned about different topics from python
+            Pylint, AAA Testing, OOPS Concepts, and SOLID principles  </p>
+
+
     </div>
 </div>
 

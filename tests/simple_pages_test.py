@@ -44,3 +44,27 @@ def test_request_page4(client):
     response = client.get("/page4")
     assert response.status_code == 200
     assert b"CI/CD" in response.data
+
+def test_request_page5(client):
+    """This makes the page1 page"""
+    response = client.get("/page5")
+    assert response.status_code == 200
+    assert b"OOP" in response.data
+
+def test_request_page6(client):
+    """This makes the page1 page"""
+    response = client.get("/page6")
+    assert response.status_code == 200
+    assert b"AAA" in response.data
+
+def test_request_page7(client):
+    """This makes the page1 page"""
+    response = client.get("/page7")
+    assert response.status_code == 200
+    assert b"Principle" in response.data
+
+def test_request_page8(client):
+    """This makes the page1 page"""
+    response = client.get("/page8")
+    assert response.status_code == 200
+    assert b"SOLID" in response.data
