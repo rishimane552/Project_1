@@ -19,7 +19,15 @@
 <div class="container">
     <nav class="nav nav-pills nav-fill">
         <a class="nav-link active" aria-current="page" href="/">Homepage</a>
+
         <a class="nav-link" href="/page1">GitHub</a>
+
+
+        <a class="nav-link" href="/page1">GitHub</a>
+
+        <a class="nav-link" href="/page1">Git</a>
+
+
         <a class="nav-link" href="/page2">Docker</a>
         <a class="nav-link" href="/page3">Python/Flask</a>
         <a class="nav-link" href="/page4">CI/CD</a>
@@ -34,6 +42,10 @@
         <div id="carouselExampleControls" class="carousel slide " data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
+
+                    <a href="/page1"><img src="{{ url_for('static', filename='images/git_index.png') }}"  class=" img-fluid d-block mx-auto" alt="git"></a>
+
+
                     <a href="/page1"><img src="{{ url_for('static', filename='images/git_index.png') }}"  class=" img-fluid d-block mx-auto" alt="git"></a>
                 </div>
                 <div class="carousel-item ">
@@ -44,6 +56,25 @@
                 </div>
                 <div class="carousel-item">
                     <a href="/page4"><img src="{{ url_for('static', filename='images/cicd.png') }}" class="img-fluid d-block mx-auto" alt="cicd"></a>
+
+                    <a href="/page1"><img src="{{ url_for('static', filename='images/git_index.png') }}"
+                                          class="d-block w-100" alt="git"></a>
+
+                </div>
+                <div class="carousel-item ">
+                    <a href="/page2"><img src="{{ url_for('static', filename='images/docker_index.png') }}" class="img-fluid d-block mx-auto" alt="docker"></a>
+                </div>
+                <div class="carousel-item">
+                    <a href="/page3"><img src="{{ url_for('static', filename='images/py_index.png') }}" class="img-fluid d-block mx-auto" alt="flask"></a>
+                </div>
+                <div class="carousel-item">
+
+                    <a href="/page4"><img src="{{ url_for('static', filename='images/cicd.png') }}" class="img-fluid d-block mx-auto" alt="cicd"></a>
+
+                    <a href="/page4"><img src="{{ url_for('static', filename='images/cicd.png') }}"
+                                          class="d-block w-100" alt="cicd"></a>
+
+
                 </div>
 
             </div>
@@ -80,6 +111,7 @@
                     <p class="card-text">Docker is an open platform for developing, shipping, and running applications.Click on the link below to read more.</p>
                     <a href="/page2" class="card-link">Docker</a>
 
+
                 </div>
             </div>
         </div>
@@ -91,16 +123,24 @@
                     <p class="card-text">This has details of Project Directory, and briefly talks about Pytest</p>
                     <a href="/page3" class="card-link">Python/Flask</a>
 
+
                 </div>
             </div>
         </div>
         <div class="col">
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
+
                     <h5 class="card-title">CI/CD</h5>
 
                     <p class="card-text">Continous Integration and Continous Delivery/Deployment</p>
                     <a href="/page4" class="card-link">CI/CD</a>
+
+                    <h5 class="card-title">Python/Flask</h5>
+
+                    <p class="card-text">This has details of Project Directory, and briefly talks about Pytest</p>
+                    <a href="/page3" class="card-link">Python/Flask</a>
+
 
                 </div>
             </div>
@@ -110,10 +150,18 @@
         <div class="col">
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
+
                     <h5 class="card-title">OOPs Glossary</h5>
 
                     <p class="card-text">This Page tells you more about the basic OOPs terminology</p>
                     <a href="/page5" class="card-link">OOPs Glossary</a>
+
+
+                    <h5 class="card-title">CI/CD</h5>
+
+                    <p class="card-text">Continous Integration and Continous Delivery/Deployment</p>
+                    <a href="/page4" class="card-link">CI/CD</a>
+
 
                 </div>
             </div>

@@ -26,6 +26,7 @@
 
     <div class="row">
         <!-- col 1 -->
+
         <h1 class="font-monospace">SOLID Concepts </h1><br>
         <div class="col-8">
             <h4><b><i>What is SOLID? </i></b></h4><br>
@@ -81,9 +82,74 @@
         """ This is the add method"""
         return value_1 - value_2
 
+        <h1 class="font-monospace">Object Oriented Programming Principle Concepts </h1><br>
+        <div class="col-8">
+            <h4><b><i>Encapsulation</i></b></h4><br>
+            <p>
+                <b><i> Encapsulation </i></b> in Python describes the concept of bundling data and methods within a single unit. So,
+                for example, when you create a class, it means you are implementing encapsulation. A class is an example
+                of encapsulation as it binds all the data members (instance variables) and methods into a single unit.
+            </p>
+            <pre><code>class Calculation:
+                """ calculation abstract base class"""
+
+                # pylint: disable=too-few-public-methods
+                def __init__(self, tuple_list: tuple):
+                    """ constructor method"""
+                    self.values = Calculation.convert_args_to_tuple_of_float(tuple_list)
+
+                @classmethod
+                def create(cls, tuple_list: tuple):
+                    """ factory method"""
+                    return cls(tuple_list)
+            </code></pre>
+            <p>
+                In this example, we create an Employee class by defining employee attributes such as name and salary as
+                an instance variable and implementing behavior using work() and show() instance methods.
+            </p>
+            <h4><b><i>Inheritance</i></b></h4><br>
+            <p>
+                <b><i> Inheritance </i></b> in Python describes the concept of bundling data and methods within a single unit. So,
+                for example, when you create a class, it means you are implementing encapsulation. A class is an example
+                of encapsulation as it binds all the data members (instance variables) and methods into a single unit.
+            </p>
+            <pre><code>class Calculation:
+            """ calculation abstract base class"""
+
+            # pylint: disable=too-few-public-methods
+            def __init__(self, tuple_list: tuple):
+                """ constructor method"""
+                self.values = Calculation.convert_args_to_tuple_of_float(tuple_list)
+
+            @classmethod
+            def create(cls, tuple_list: tuple):
+                """ factory method"""
+                return cls(tuple_list)
+
+            @staticmethod
+            def convert_args_to_tuple_of_float(tuple_list):
+                """ standardize values to list of floats"""
+                list_values_float = []
+                for item in tuple_list:
+                    list_values_float.append(float(item))
+                return tuple(list_values_float)
+
+
+class Addition(Calculation):
+            """ calculation addition class"""
+
+            def get_result(self):
+                """get the addition results"""
+                sum_of_values = 0.0
+                for value in self.values:
+                    sum_of_values = Add.add(value, sum_of_values)
+                return sum_of_values
+
+
             </code>
 
             </pre>
+
             <h4><b><i>L - Liskov Substitution Principle</i></b></h4><br>
             <p>
                 Liskov Substitution Principle states:
@@ -138,6 +204,20 @@
                 risky at the production level. So always try to make classes loosely coupled as much as you can and you
                 can achieve this through abstraction. The main motive of this principle is decoupling the dependencies
                 so if class A changes the class B doesn’t need to care or know about the changes.
+
+            <h4><b><i>Polymorphism</i></b></h4><br>
+            <p>
+                The word polymorphism means having many forms. In programming, polymorphism means the same function name
+                (but different signatures) being used for different types.
+            </p>
+            <p>
+                In Python, Polymorphism lets us define methods in the child class that have the same name as the methods
+                in the parent class. In inheritance, the child class inherits the methods from the parent class. However,
+                it is possible to modify a method in a child class that it has inherited from the parent class. This is
+                particularly useful in cases where the method inherited from the parent class doesn’t quite fit the
+                child class. In such cases, we re-implement the method in the child class. This process of re-implementing
+                a method in the child class is known as Method Overriding.
+
             </p>
 
 
@@ -146,16 +226,37 @@
         <!-- col 2 for images -->
 
         <div class="col">
+
             <div class="row mb-3">
                 <li><a href="https://github.com/rishimane552">GitHub Repo: Rishikesh Mane</a></li>
             </div>
             <!-- row 1 image1 -->
             <div class="row mb-3">
                 <img src="{{ url_for('static', filename='images/s1.png') }}" class="img-fluid" alt="Image 1">
+
+            <div class="row mb-3"><li><a href="https://github.com/rishimane552" >GitHub Repo: Rishikesh Mane</a></li>
+                </div>
+            <!-- row 1 image1 -->
+            <div class="row mb-3">
+                <img src="{{ url_for('static', filename='images/py2.png') }}" class="img-fluid" alt="Image 1">
+
             </div>
             <!-- row 1 image1 end -->
             <!-- row 2 image2 -->
 
+
+
+
+            <div class="row mb-3">
+                <img src="{{ url_for('static', filename='images/py1.png') }}" class="img-fluid" alt="Image 2">
+            </div>
+            <!-- row 2 image2 end -->
+            <!-- row 3 image3 -->
+
+            <div class="row mb-3">
+                <img src="{{ url_for('static', filename='images/py3.png') }}" class="img-fluid" alt="Image 3">
+            </div>
+            <!-- row 3 image3 end -->
 
 
         </div>
