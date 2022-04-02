@@ -97,7 +97,12 @@ class Addition(Calculation):
             <p>
                 In this example, we have Addition class inherited from the calculation class. the child class which is
                 the addition class will have access to all the methods and variables from the parent class which is the
+
+                Calculation class. sum_of_values = Add.add(value, sum_of_values) in this code we are using add function
+                from the parent class which was created in Calculation
+
                 Calculation class. sum_of_values = Add.add(value, sum_of_values) in this code we are using add function from the parent class which was created in Calculation
+
             </p>
             <h4><b><i>Polymorphism</i></b></h4><br>
             <p>
@@ -111,9 +116,100 @@ class Addition(Calculation):
                 it is possible to modify a method in a child class that it has inherited from the parent class. This is
                 particularly useful in cases where the method inherited from the parent class doesn’t quite fit the
                 child class. In such cases, we re-implement the method in the child class. This process of
+
+                re-implementing a method in the child class is known as Method Overriding. For example, in the below
+                code we are using the
+                get_result() in two different classes and they both do two different things, first one is for addition
+                and the second one is for
+                Multiplication.
+            </p>
+
+            <pre class="border-top border-bottom" style="height: 300px"><code>
+
+
+            class Addition(Calculation):
+    """ calculation addition class"""
+
+    def get_result(self):
+        """get the addition results"""
+        sum_of_values = 0.0
+        for value in self.values:
+            sum_of_values = Add.add(value, sum_of_values)
+        return sum_of_values
+
+
+class Multiplication(Calculation):
+    """multiplication calculation object"""
+
+    def get_result(self):
+        """get the multiplication results"""
+        result = 1.0
+        for value in self.values:
+            result = Mult.multiply(result, value)
+        return result
+            </code></pre>
+
+            <h4><b><i>Abstraction</i></b></h4><br>
+
+            <p>
+                Abstraction in python is defined as a process of handling complexity by hiding unnecessary information
+                from the user. This is one of the core concepts of object-oriented programming (OOP) languages. That
+                enables the user to implement even more complex logic on top of the provided abstraction without
+                understanding or even thinking about all the hidden background/back-end complexity.
+
+                That’s a very generic core topic not only limited to object-oriented programming. You can observe it
+                everywhere in the real world or in our surroundings.
+            </p>
+            <p>
+                A class that consists of one or more abstract method is called the abstract class. Abstract methods do
+                not contain their implementation. Abstract class can be inherited by the subclass and abstract method
+                gets its definition in the subclass. Abstraction classes are meant to be the blueprint of the other
+                class. An abstract class can be useful when we are designing large functions.
+            </p>
+            <p>
+                In the below code, we are using all the operations, but we are getting all the calculations we will be
+                performing from the calculations class
+                and we are just importing it. So we are just hiding the calculations we are performing.
+            </p>
+
+            <pre class="border-top border-bottom" style="height: 300px"><code>
+            from calculator.calculations import Addition, Subtraction, Multiplication, Division
+
+
+class Calculator:
+    """ This is the default result property"""
+
+    @staticmethod
+    def add(tuple_list):
+        """ This is the add method"""
+        # Call the static method add to return the sum and set it to the calculator result property
+        calculation = Addition.create(tuple_list)
+        return calculation.get_result()
+
+    @staticmethod
+    def subtract(tuple_list):
+        """ This is the subtract method"""
+        calculation = Subtraction.create(tuple_list)
+        return calculation.get_result()
+
+    @staticmethod
+    def multiply(tuple_list):
+        """ This is the subtract method"""
+        calculation = Multiplication.create(tuple_list)
+        return calculation.get_result()
+
+    @staticmethod
+    def divide(tuple_list):
+        """ This is the subtract method"""
+        calculation = Division.create(tuple_list)
+        return calculation.get_result()
+
+</code></pre>
+
                 re-implementing
                 a method in the child class is known as Method Overriding.
             </p>
+
 
 
         </div>
@@ -126,19 +222,37 @@ class Addition(Calculation):
             </div>
             <!-- row 1 image1 -->
             <div class="row mb-3">
+
+                <img src="{{ url_for('static', filename='images/oops.png') }}" class="img-fluid d-block mx-auto" alt="Image 1">
+
                 <img src="{{ url_for('static', filename='images/py2.png') }}" class="img-fluid" alt="Image 1">
+
             </div>
             <!-- row 1 image1 end -->
             <!-- row 2 image2 -->
 
             <div class="row mb-3">
+
+                <img src="{{ url_for('static', filename='images/encap.png') }}" class="img-fluid" alt="Image 2">
+
                 <img src="{{ url_for('static', filename='images/py1.png') }}" class="img-fluid" alt="Image 2">
+
             </div>
             <!-- row 2 image2 end -->
             <!-- row 3 image3 -->
 
             <div class="row mb-3">
+
+                <img src="{{ url_for('static', filename='images/inher.png') }}" class="img-fluid" alt="Image 3">
+            </div>
+            <div class="row mb-3">
+                <img src="{{ url_for('static', filename='images/poly.png') }}" class="img-fluid" alt="Image 3">
+            </div>
+            <div class="row mb-3">
+                <img src="{{ url_for('static', filename='images/abs.png') }}" class="img-fluid" alt="Image 3">
+
                 <img src="{{ url_for('static', filename='images/py3.png') }}" class="img-fluid" alt="Image 3">
+
             </div>
             <!-- row 3 image3 end -->
 
