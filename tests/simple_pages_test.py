@@ -96,4 +96,4 @@ def test_login_page(client):
     """This makes the ci/cd page"""
     response = client.get("/login")
     assert response.status_code == 200
-    assert b"Login Page" in response.data
+    assert b"Login" in response.data
